@@ -1,11 +1,6 @@
-from prefect import flow, task
-from prefect.blocks.system import String
+from prefect import flow
+from tasks.string_block import create_message
 
-@task
-def create_message():
-    string_block = String.load("test-string")
-    msg = string_block.value
-    return msg
 
 @flow
 def something_else():
@@ -19,5 +14,5 @@ def hello_world():
     new_message = task_message + str(subflow_message)
     print(new_message)
     
-# if __name__ == "main":
-hello_world()
+if __name__ == "main":
+    hello_world()
