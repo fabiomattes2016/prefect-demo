@@ -6,24 +6,18 @@ description: null
 version: 364cc88e9fc69514162ae6f06f6026b2
 # The work queue that will handle this deployment's runs
 work_queue_name: default
-work_pool_name: default-agent-pool
+work_pool_name: null
 tags: []
 parameters: {}
 schedule: null
 schedules:
 - schedule:
-    cron: 0 1 * * *
+    cron: '* * * * *'
     timezone: null
     day_or: true
   active: true
 is_schedule_active: null
 infra_overrides: {}
-
-###
-### DO NOT EDIT BELOW THIS LINE
-###
-flow_name: hello-world
-manifest_path: null
 infrastructure:
   type: process
   env: {}
@@ -32,11 +26,14 @@ infrastructure:
   command: null
   stream_output: true
   working_dir: null
-  _block_document_id: fc5563a0-0763-48ad-9d00-97bcab59e075
-  _block_document_name: anonymous-8bb67b13-f8b8-43ae-b364-74cf26924535
-  _is_anonymous: true
   block_type_slug: process
   _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: hello-world
+manifest_path: null
 storage:
   repository: https://github.com/fabiomattes2016/prefect-demo
   reference: null
@@ -55,6 +52,6 @@ parameter_openapi_schema:
   properties: {}
   required: null
   definitions: null
-timestamp: '2024-06-20T17:55:36.548552+00:00'
+timestamp: '2024-06-20T17:59:31.408802+00:00'
 triggers: []
 enforce_parameter_schema: null
