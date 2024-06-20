@@ -7,7 +7,7 @@ def something_else():
     result = 10
     return(result)
 
-@flow
+@flow(log_prints=True)
 def hello_world():
     subflow_message = something_else()
     task_message = create_message()
